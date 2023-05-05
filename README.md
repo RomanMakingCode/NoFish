@@ -1,33 +1,39 @@
-# (project name)
+# (NoFish)
 
-(your name)
+(Roman)
 18-224/624 Spring 2023 Final Tapeout Project
 
 ## Overview
 
-(high-level overview of what your project does, in a few lines)
+Cryptographic accelator for a example algorithem. The algorithem uses substitution boxes and was an intro to cryptography for myself, loosely based off blowfish. Key and word size are both limited to 16 bits. Entry to key and intxt register are SIPO interfaces. Output is single hexadecimal value from one of 4 16 bit types (key, intxt, decrypt intext, encrypt intext)
 
 ## How it Works
 
-(deeper description of your project's internal operations, along with any diagrams. large parts of this can likely be copied from your project design plan and/or RTL checkpoint submission)
+Combinational calculation of sbox and P keys done through xor. 
 
 To add images, upload them into the repo and use the following format to embed them in markdown:
-
-![](image1.png)
 
 ## Inputs/Outputs
 
 (describe what each of the 12 input and 12 output pins are used for; )
+2 bit input - mode select
+4 bit input - hexidecimal output select
+1 bit input - 0/1 for key/intxt entry
+1 bit input - key ready, this tells selected SIPO register to shift in a bit
+
+8 bits of output for 7 segment display 
 
 (if you have any specific dependency on clock frequency; i.e. for visual effects or for an external interface, explain it here.)
 
 ## Hardware Peripherals
 
-(if you have any external hardware peripherals such as buttons, LEDs, sensors, etc, please explain them here. otherwise, remove this section)
+Dip switches to control input
+7 Segment display output 
 
 ## Design Testing / Bringup
 
 (explain how to test your design; if relevant, give examples of inputs and expected outputs)
+Inputting a key of BEEF and intxt of BEEF will produce the out text of 6301 
 
 (if you would like your design to be tested after integration but before tapeout, provide a Python script that uses the Debug Interface posted on canvas and explain here how to run the testing script)
 
