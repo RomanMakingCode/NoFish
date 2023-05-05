@@ -449,6 +449,7 @@ module Mux41
       2'b11: out = s4;
     endcase
   end
+endmodule : Mux41
   
   // A SIPO Shift Register, with controllable shift direction
 // Load has priority over shifting.
