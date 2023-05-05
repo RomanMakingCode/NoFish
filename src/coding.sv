@@ -430,3 +430,39 @@ module decrypt(
    end
 
 endmodule : decrypt
+
+
+module Mux41
+  (input logic [1:0] sel,
+   input logic [7:0] s1,
+   input logic [7:0] s2,
+   input logic [7:0] s3,
+   input logic [7:0] s4,
+
+   output logic [7:0] out);
+
+  always_comb begin
+    case(sel)
+      2'b00: out = s1;
+      2'b01: out = s2;
+      2'b10: out = s3;
+      2'b11: out = s4;
+    endcase
+  end
+  
+  // A SIPO Shift Register, with controllable shift direction
+// Load has priority over shifting.
+module ShiftRegister_SIPO
+  #(parameter WIDTH=8)
+  (input  logic             serial,
+   input  logic             en, left, clock,
+   output logic [WIDTH-1:0] Q);
+   
+  always_ff @(posedge clock)
+    if (en)
+      if (left)
+        Q <= {Q[WIDTH-2:0], serial};
+      else
+        Q <= {serial, Q[WIDTH-1:1]};
+        
+endmodule : ShiftRegister_SIPO
