@@ -1,6 +1,7 @@
 --- 
 project:
   source_files:
+    - toplevel_chip.v
     - coding.sv
   top_module:  "toplevel_chip"
 
