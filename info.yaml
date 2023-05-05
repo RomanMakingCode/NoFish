@@ -1,9 +1,8 @@
 --- 
 project:
   source_files:
-    - toplevel_chip.v
-    - chip.sv
-    - decoder.v
+    - coding.sv
+    - library.sv
   top_module:  "toplevel_chip"
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
@@ -13,33 +12,33 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       "PLACEHOLDER"      # Your name
-  discord:      ""      # Your discord handle
-  title:        "PLACEHOLDER"      # Project title
-  description:  "PLACEHOLDER"      # Short description of what your project does
+  author:       "Roman"      # Your name
+  discord:      "Roman Around #2063"      # Your discord handle
+  title:        "NoFish"      # Project title
+  description:  "Implements a simple cryptography algorithem that makes use of sboxes and xor operators"      # Short description of what your project does
   how_it_works: "PLACEHOLDER"      # Longer description of how the project works
-  how_to_test:  "PLACEHOLDER"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  "PLACEHOLDER"      # Describe any external hardware needed
+  how_to_test:  "Using the ready, inbit, and mode select switches, a key and intxt can be inputted and then using the hex select, the cypher hex can be displayed"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "7 segment display and dipswitch board are necessary for opperation"      # Describe any external hardware needed
   language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     1000       # Clock frequency in Hz (if required)
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - mode select bit 1
+    - mode select bit 2
+    - display select bit 1
+    - display select bit 2
+    - display select bit 3
+    - display select bit 4
+    - in_bit
+    - ready 
   outputs:
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - 7 segment display out 1
+    - 7 segment display out 2
+    - 7 segment display out 3
+    - 7 segment display out 4
+    - 7 segment display out 5
+    - 7 segment display out 6
+    - 7 segment display out 7
+    - 7 segment display out 8 (if display has decimal)
 
