@@ -15,6 +15,7 @@ The hexadecimal result can be displayed using a hexidecimal key output and switc
 
 ## Inputs/Outputs
 Inputs:
+
 8 bits of input controlled by a dipswitch:
 
 2 bit input - mode select
@@ -27,10 +28,12 @@ Inputs:
 
 
 Outputs:
+
 8 bits of output for 7 segment display 
 
 ## Hardware Peripherals
 Dip switches to control input
+
 7 Segment display output 
 
 ## Design Testing / Bringup
