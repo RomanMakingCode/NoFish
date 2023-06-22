@@ -8,8 +8,11 @@ Cryptographic accelator for a symmetric-key block cipher. I created this algorit
 
 ## How it Works
 The mdule has two input modes, one for the key and the other for the in text.
+
 Using a SIPO shift register, the user manually shifts in a 16 bit key/intext.
+
 Then using some cominational circuitry, the module will calulate the cipher/decrypted text.
+
 The hexadecimal result can be displayed using a hexidecimal key output and switching dip switch inputs.
 
 
