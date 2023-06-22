@@ -16,10 +16,15 @@ The hexadecimal result can be displayed using a hexidecimal key output and switc
 ## Inputs/Outputs
 Inputs:
 8 bits of input controlled by a dipswitch:
+
 2 bit input - mode select
+
 4 bit input - hexidecimal output select
+
 1 bit input - choose if editing key or in text
+
 1 bit input - ready, tells SIPO regster to shift in a bit 
+
 
 Outputs:
 8 bits of output for 7 segment display 
