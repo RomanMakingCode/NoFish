@@ -4,7 +4,7 @@
 18-224/624 Spring 2023 Final Tapeout Project
 
 ## Overview
-Cryptographic accelerator for a symmetric-key block cipher. I created this algorithem mysef and it is loosely based off of Blowfish; it uses substitution boxes and symmetric shifting much like Blowfish. The algorithem opperates on an 16 bit key, which modifies a 16 bit input. Depending on the mode it will output either the cipher text or decrypted. This was both an intro to cryptography and intro to taping out a chip. 
+Cryptographic accelerator for a symmetric-key block cipher. I created this algorithem mysef and it is loosely based off of Blowfish; it uses substitution boxes and symmetric shifting much like Blowfish. The algorithem opperates on an 16 bit key, which modifies a 16 bit input. Depending on the mode it will output either the cipher text or decrypted. 
 
 ## How it Works
 The mdule has two input modes, one for the key and the other for the in text.
